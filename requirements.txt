@@ -1,0 +1,4 @@
+requests>=0.14.1
+ipython>=0.13
+gevent>=0.13.6
+beautifulSoup>=3.2.1

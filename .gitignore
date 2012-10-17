@@ -1,6 +1,4 @@
-.eunit
-deps
-priv
-*.o
-*.beam
-*.plt
+data.pickle
+.virtualenv
+.pydevproject
+.project

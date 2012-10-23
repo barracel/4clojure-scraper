@@ -1,4 +1,7 @@
+.cache*
 data.pickle
 .virtualenv
 .pydevproject
 .project
+.settings/
+*.pyc

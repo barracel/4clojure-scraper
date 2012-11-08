@@ -62,6 +62,7 @@ class Scraper(object):
 def cache(func):
     @functools.wraps(func)
     def decorator(*args, **kwargs):
+        #FIXME: sort kwargs to ensure unique hash
         call_args = ''.join(str(x) for x in itertools.chain(args,
                                                             kwargs.values()))
         cache_file = './.cache_%s' % hash(call_args)
@@ -115,6 +116,7 @@ def main(user, password, output_file):
     return problems, solutions
 
 if __name__ == '__main__':
+    #TODO: allow to disable cache
     if len(sys.argv) < 4:
         print ("Usage: python %s user password output_file"
                % os.path.basename(__file__))
